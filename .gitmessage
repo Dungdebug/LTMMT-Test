@@ -1,0 +1,9 @@
+# Conventional Commit template
+# format: <type>: <short summary>
+#
+# Examples:
+# feat: thêm chức năng đăng nhập
+# fix: sửa lỗi crash khi mất kết nối mạng
+# refactor: tối ưu xử lý API
+# docs: cập nhật hướng dẫn cài đặt
+

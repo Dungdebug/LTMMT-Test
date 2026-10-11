@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -eu
+
+commit_msg_file="${1:-}"
+if [ -z "$commit_msg_file" ]; then
+  echo "Missing commit message file." >&2
+  exit 1
+fi
+
+msg=$(head -n 1 "$commit_msg_file")
+pattern='^(feat|fix|refactor|docs)(\([a-zA-Z0-9 _-]+\))?: .+'
+
+if ! [[ "$msg" =~ $pattern ]]; then
+  echo "Commit message không đúng chuẩn Conventional Commits." >&2
+  echo "Ví dụ hợp lệ:" >&2
+  echo "  feat: thêm chức năng đăng nhập" >&2
+  echo "  fix: sửa lỗi crash khi mất kết nối mạng" >&2
+  echo "  refactor: tối ưu xử lý API" >&2
+  echo "  docs: cập nhật hướng dẫn cài đặt" >&2
+  exit 1
+fi
+
+exit 0

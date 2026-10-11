@@ -1,0 +1,45 @@
+# Ignore common build artifacts and local editor settings
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.next/
+out/
+coverage/
+.npm/
+.parcel-cache/
+
+# Java / JVM
+target/
+bin/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+.venv/
+.pytest_cache/
+
+# IDE / editor
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# OS files
+*.tmp
+*.temp
